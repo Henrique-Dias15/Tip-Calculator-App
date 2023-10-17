@@ -31,13 +31,16 @@
   width: 60rem;
   background: hsl(0, 0%, 100%);
   border-radius: 2rem;
-  padding: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* Area de inputs */
 .Inputs {
-  height: 24rem;
-  width: 26rem;
+  height: 26rem;
+  width: 27rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -167,4 +170,57 @@
 #people:focus {
   cursor: pointer;
   outline: 2px solid hsl(173, 61%, 77%);
+}
+
+/* Resultados */
+.Resultados{
+    height: 26rem;
+    width: 27rem;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1rem;    
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Textos de resultado */
+.tipAmount,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Resultados h2 {
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+#tipAmountText p,
+#totalText p {
+    color: hsl(184, 14%, 56%);
+}
+
+#tipAmountValue,
+#totalValue p {
+    font-size: 3rem;
+    color: hsl(172, 67%, 45%);
+}
+
+/* Botão de Reset */
+.reset button {
+    appearance: none;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color:  hsl(183, 79%, 24%);
+    color: hsl(184, 90%, 20%);
+    font-size: 1.5rem;
+}
+
+.reset button:hover {
+    background-color: hsl(173, 61%, 77%);
+    cursor: pointer;
 }

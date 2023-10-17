@@ -32,6 +32,30 @@ function App() {
             <input type="number" id="people" />
           </div>
         </div>
+
+        <div className="Resultados">
+          <div className="tipAmount">
+            <div id="tipAmountText">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <div  id="tipAmountValue">
+              <p>$0.00</p>
+            </div>
+          </div>
+          <div className="total">
+            <div id="totalText">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <div id="totalValue">
+              <p>$0.00</p>
+            </div>
+          </div>
+          <div className="reset">
+            <button id="resetButoon">RESET</button>
+          </div>
+        </div>
       </div>
     </div>
   );
