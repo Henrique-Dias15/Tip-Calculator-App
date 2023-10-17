@@ -10,7 +10,7 @@
 
 .App {
   height: 100vh;
-  width: 1440px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,9 @@
 /* Titulo */
 .App h1 {
   color: hsl(183, 100%, 15%);
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
 }
 
 /* Principal */
@@ -73,6 +75,10 @@
   color: hsl(181, 87%, 12%);
 }
 
+.inputBill input::placeholder {
+  color: hsl(180, 14%, 68%);
+}
+
 #bill::-webkit-inner-spin-button,
 #bill::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -104,6 +110,7 @@
   border: none;
   font-size: 1.5rem;
   color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
 }
 
 .buttons input:hover {
@@ -160,6 +167,10 @@
   text-align: right;
 }
 
+.inputPeople input::placeholder {
+  color: hsl(180, 14%, 68%);
+}
+
 #people::-webkit-inner-spin-button,
 #people::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -173,54 +184,54 @@
 }
 
 /* Resultados */
-.Resultados{
-    height: 26rem;
-    width: 27rem;
-    background-color: hsl(183, 100%, 15%);
-    border-radius: 1rem;    
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.Resultados {
+  height: 26rem;
+  width: 27rem;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Textos de resultado */
 .tipAmount,
 .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Resultados h2 {
-    font-size: 1rem;
-    color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
 }
 
 #tipAmountText p,
 #totalText p {
-    color: hsl(184, 14%, 56%);
+  color: hsl(184, 14%, 56%);
 }
 
 #tipAmountValue,
 #totalValue p {
-    font-size: 3rem;
-    color: hsl(172, 67%, 45%);
+  font-size: 3rem;
+  color: hsl(172, 67%, 45%);
 }
 
 /* Botão de Reset */
 .reset button {
-    appearance: none;
-    height: 3rem;
-    width: 100%;
-    border: none;
-    border-radius: 0.5rem;
-    background-color:  hsl(183, 79%, 24%);
-    color: hsl(184, 90%, 20%);
-    font-size: 1.5rem;
+  appearance: none;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: hsl(183, 79%, 24%);
+  color: hsl(184, 90%, 20%);
+  font-size: 1.5rem;
 }
 
 .reset button:hover {
-    background-color: hsl(173, 61%, 77%);
-    cursor: pointer;
+  background-color: hsl(173, 61%, 77%);
+  cursor: pointer;
 }

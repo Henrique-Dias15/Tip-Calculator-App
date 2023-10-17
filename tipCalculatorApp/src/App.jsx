@@ -12,7 +12,7 @@ function App() {
         <div className="Inputs">
           <div className="inputBill">
             <label htmlFor="bill">Bill</label>
-            <input type="number" id="bill" />
+            <input type="number" id="bill" placeholder={0} />
           </div>
 
           <div className="inputTip">
@@ -29,7 +29,7 @@ function App() {
 
           <div className="inputPeople">
             <label htmlFor="people">Number of People</label>
-            <input type="number" id="people" />
+            <input type="number" id="people" placeholder={0} />
           </div>
         </div>
 
@@ -39,7 +39,7 @@ function App() {
               <h2>Tip Amount</h2>
               <p>/ person</p>
             </div>
-            <div  id="tipAmountValue">
+            <div id="tipAmountValue">
               <p>$0.00</p>
             </div>
           </div>
