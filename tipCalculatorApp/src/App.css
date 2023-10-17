@@ -120,6 +120,7 @@
 }
 
 #tipCustom {
+    border: none;
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
   text-align: center;
@@ -129,9 +130,10 @@
   color: hsl(184, 14%, 56%);
 }
 
-#tipCustom:hover {
-  border-color: hsl(173, 61%, 77%);
-  cursor: pointer;
+#tipCustom:hover,
+#tipCustom:focus {
+    outline: 2px solid hsl(173, 61%, 77%);
+    cursor: pointer;
 }
 
 #tipCustom::-webkit-inner-spin-button,
@@ -190,7 +192,7 @@
   background-color: hsl(183, 100%, 15%);
   border-radius: 1rem;
   padding: 2rem;
-  display: flex;
+  display: flex;    
   flex-direction: column;
   justify-content: space-between;
 }
