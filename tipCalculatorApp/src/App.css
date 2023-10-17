@@ -1,133 +1,157 @@
 /* Geral */
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  box-sizing: border-box;
 }
 
 .App {
-    height: 100vh;
-    width: 1440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    background: hsl(185, 41%, 84%);
+  height: 100vh;
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background: hsl(185, 41%, 84%);
 }
 
 /* Titulo */
 .App h1 {
-    color: hsl(183, 100%, 15%);
-    letter-spacing: 1rem;
+  color: hsl(183, 100%, 15%);
+  letter-spacing: 1rem;
 }
 
 /* Principal */
 .Main {
-    height: 30rem;
-    width: 60rem;
-    background: hsl(0, 0%, 100%);
-    border-radius:2rem;
-    padding: 3rem;
+  height: 30rem;
+  width: 60rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  padding: 3rem;
 }
 
 /* Area de inputs */
-.Inputs{
-    width: 26rem;
-    display: flex;
-    flex-direction: column;
+.Inputs {
+  height: 24rem;
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Area de colocar a conta */
 .inputBill {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
 }
 
 .inputBill label {
-    color: hsl(184, 14%, 56%);
-    margin-bottom: 0.5rem;
+  color: hsl(184, 14%, 56%);
+  margin-bottom: 0.5rem;
 }
 
-.inputBill input{
-    appearance: none;
-    border: none;
-    height: 3rem;
-    background-color: hsl(189, 41%, 97%);
-    font-size: 2rem;
-    padding: 0 1rem;
-    text-align: right;
-    border-radius: 3px;
-    color: hsl(181, 87%, 12%);
+.inputBill input {
+  background-image: url(assets\icon-dollar.svg);
+  background-position: 95%;
+  background-repeat: no-repeat;
+  appearance: none;
+  border: none;
+  height: 3rem;
+  background-color: hsl(189, 41%, 97%);
+  font-size: 2rem;
+  padding: 0 1rem;
+  text-align: right;
+  border-radius: 3px;
+  color: hsl(181, 87%, 12%);
 }
 
-.inputBill input::placeholder {
-    color: hsl(184, 14%, 56%);
-    font-style: italic;
-} 
-
-#bill::-webkit-inner-spin-button, 
-#bill::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+#bill::-webkit-inner-spin-button,
+#bill::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-#bill:hover, 
+#bill:hover,
 #bill:focus {
-    cursor: pointer;
-    outline: 2px solid hsl(173, 61%, 77%);
+  cursor: pointer;
+  outline: 2px solid hsl(173, 61%, 77%);
 }
 
 /* Botões de % tip */
-.inputTip{
-    margin-top: 1rem;
-}
-
 .inputTip p {
-    color: hsl(184, 14%, 56%);
+  color: hsl(184, 14%, 56%);
 }
 
 .buttons {
-    margin-top: 0.5rem;
-    display: grid;
-    grid-template-columns: 8rem 8rem 8rem;
-    grid-template-rows: 3rem 3rem 3rem;
-    gap: 1rem 1rem;
+  height: 7rem;
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 8rem 8rem 8rem;
+  grid-template-rows: 3rem 3rem 3rem;
+  gap: 1rem 1rem;
 }
 
 .buttons input {
-    background-color: hsl(183, 100%, 15%);
-    border: none;
-    font-size: 1.5rem;
-    color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
 }
 
 .buttons input:hover {
-    background-color: hsl(173, 61%, 77%);
-    color: hsl(183, 100%, 15%);
-    cursor: pointer;
+  background-color: hsl(173, 61%, 77%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
 }
 
 #tipCustom {
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 15%);
-    text-align: center;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  text-align: center;
 }
 
 #tipCustom::placeholder {
-    color: hsl(184, 14%, 56%);
+  color: hsl(184, 14%, 56%);
 }
 
 #tipCustom:hover {
-    border-color: hsl(173, 61%, 77%);
-    cursor: pointer;
+  border-color: hsl(173, 61%, 77%);
+  cursor: pointer;
 }
 
-#tipCustom::-webkit-inner-spin-button, 
-#tipCustom::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+#tipCustom::-webkit-inner-spin-button,
+#tipCustom::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Area de colocar o numero de pessoas */
+.inputPeople {
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+}
+
+.inputPeople label {
+  color: hsl(184, 14%, 56%);
+  margin-bottom: 0.5rem;
+}
+
+.inputPeople input {
+  background-image: url(assets\icon-person.svg);
+  background-position: 5%;
+  background-repeat: no-repeat;
+  appearance: none;
+  border: none;
+  height: 3rem;
+  background-color: hsl(189, 41%, 97%);
+  font-size: 2rem;
+  padding: 0 1rem;
+  border-radius: 3px;
+  color: hsl(181, 87%, 12%);
 }
