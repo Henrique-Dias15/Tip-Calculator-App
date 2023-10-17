@@ -134,7 +134,7 @@ function App() {
           <div className="inputBill">
             <div className="inputBillTexts">
               <label htmlFor="bill">Bill</label>
-              <p id="billText">Can't be blank</p>
+              <p id="billText">Can't be zero</p>
             </div>
             <input type="number" id="bill" placeholder={0} onInput={(e) => checkBlank1(e.target.value)}/>
           </div>
@@ -154,7 +154,7 @@ function App() {
           <div className="inputPeople">
             <div className="inputPeopleTexts">
               <label htmlFor="people">Number of People</label>
-              <p id="peopleText">Can't be blank</p>            
+              <p id="peopleText">Can't be zero</p>            
             </div>
             <input type="number" id="people" placeholder={0} onInput={(e) => checkBlank2(e.target.value)}/>
           </div>
