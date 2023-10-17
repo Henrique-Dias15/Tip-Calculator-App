@@ -7,8 +7,10 @@ function App() {
   const [button3, setButton3] = useState(false);
   const [button4, setButton4] = useState(false);
   const [button5, setButton5] = useState(false);
+  const [input1, setInput1] = useState('');
+  const [input2, setInput2] = useState('');
 
-  const boolean = (e) => {
+  const checkButtons = (e) => {
     switch (e) {
       case 'tip5':
         setButton1(button1 => !button1);
@@ -89,6 +91,38 @@ function App() {
         }
   }, [button1, button2, button3, button4, button5])
 
+  const checkBlank1 = (e) => {
+    setInput1(e);
+  }
+  const checkBlank2 = (e) => {
+    setInput2(e);
+  }
+
+  useEffect(() => {
+    if(input1 == '') {
+      var style = 'display: block';
+      billText.style = style;
+      var style2 = 'outline: 1px solid red;'
+      bill.style = style2;
+    } else {
+      var style = 'display: none;'
+      billText.style = style;
+      var style2 = 'outline: none;'
+      bill.style = style2;
+    }
+    if(input2 == '') {
+      var style = 'display: block';
+      peopleText.style = style;
+      var style2 = 'outline: 1px solid red;'
+      people.style = style2;
+    } else {
+      var style = 'display: none;'
+      peopleText.style = style;
+      var style2 = 'outline: none;'
+      people.style = style2;
+    }
+  }, [input1, input2])
+
   return (
     <div className="App">
       <h1>
@@ -98,25 +132,31 @@ function App() {
       <div className="Main">
         <div className="Inputs">
           <div className="inputBill">
-            <label htmlFor="bill">Bill</label>
-            <input type="number" id="bill" placeholder={0} />
+            <div className="inputBillTexts">
+              <label htmlFor="bill">Bill</label>
+              <p id="billText">Can't be blank</p>
+            </div>
+            <input type="number" id="bill" placeholder={0} onInput={(e) => checkBlank1(e.target.value)}/>
           </div>
 
           <div className="inputTip">
             <p>Select Tip %</p>
             <div className="buttons">
-              <input type="button" id="tip5" value={5 + "%"} onClick={(e) => boolean(e.target.id)}/>
-              <input type="button" id="tip10" value={10 + "%"} onClick={(e) => boolean(e.target.id)}/>
-              <input type="button" id="tip15" value={15 + "%"} onClick={(e) => boolean(e.target.id)}/>
-              <input type="button" id="tip25" value={25 + "%"} onClick={(e) => boolean(e.target.id)}/>
-              <input type="button" id="tip50" value={50 + "%"} onClick={(e) => boolean(e.target.id)}/>
+              <input type="button" id="tip5" value={5 + "%"} onClick={(e) => checkButtons(e.target.id)}/>
+              <input type="button" id="tip10" value={10 + "%"} onClick={(e) => checkButtons(e.target.id)}/>
+              <input type="button" id="tip15" value={15 + "%"} onClick={(e) => checkButtons(e.target.id)}/>
+              <input type="button" id="tip25" value={25 + "%"} onClick={(e) => checkButtons(e.target.id)}/>
+              <input type="button" id="tip50" value={50 + "%"} onClick={(e) => checkButtons(e.target.id)}/>
               <input type="number" id="tipCustom" placeholder={"Custom"} />
             </div>
           </div>
 
           <div className="inputPeople">
-            <label htmlFor="people">Number of People</label>
-            <input type="number" id="people" placeholder={0} />
+            <div className="inputPeopleTexts">
+              <label htmlFor="people">Number of People</label>
+              <p id="peopleText">Can't be blank</p>            
+            </div>
+            <input type="number" id="people" placeholder={0} onInput={(e) => checkBlank2(e.target.value)}/>
           </div>
         </div>
 

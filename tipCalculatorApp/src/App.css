@@ -55,6 +55,15 @@
   height: 5rem;
 }
 
+.inputBillTexts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBillTexts p {
+    color: red;
+}
+
 .inputBill label {
   color: hsl(184, 14%, 56%);
   margin-bottom: 0.5rem;
@@ -183,6 +192,15 @@
 #people:focus {
   cursor: pointer;
   outline: 2px solid hsl(173, 61%, 77%);
+}
+
+.inputPeopleTexts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputPeopleTexts p {
+    color: red;
 }
 
 /* Resultados */
