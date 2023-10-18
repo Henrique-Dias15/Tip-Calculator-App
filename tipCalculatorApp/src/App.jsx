@@ -48,7 +48,11 @@ function App() {
         setButton1(false);
         break;
       default:
-        alert("Deu errado");
+        setButton1(false);
+        setButton2(false);
+        setButton3(false);
+        setButton4(false);
+        setButton5(false);
         break;
     }
   };
@@ -60,26 +64,31 @@ function App() {
       " background-color: hsl(183, 100%, 15%); color: hsl(0, 0%, 100%);";
     if (button1) {
       tip5.style = styleSelect;
+      tipCustom.value = '';
     } else {
       tip5.style = styleNormal;
     }
     if (button2) {
       tip10.style = styleSelect;
+      tipCustom.value = '';
     } else {
       tip10.style = styleNormal;
     }
     if (button3) {
       tip15.style = styleSelect;
+      tipCustom.value = '';
     } else {
       tip15.style = styleNormal;
     }
     if (button4) {
       tip25.style = styleSelect;
+      tipCustom.value = '';
     } else {
       tip25.style = styleNormal;
     }
     if (button5) {
       tip50.style = styleSelect;
+      tipCustom.value = '';
     } else {
       tip50.style = styleNormal;
     }
@@ -165,7 +174,7 @@ function App() {
                 value={50 + "%"}
                 onClick={(e) => checkButtons(e.target.id)}
               />
-              <input type="number" id="tipCustom" placeholder={"Custom"} />
+              <input type="number" id="tipCustom" placeholder={"Custom"} onInput={(e) => checkButtons(e.target.value)}/>
             </div>
           </div>
           <div className="inputPeople">
