@@ -62,31 +62,31 @@ const Button = ({ value, id }) => {
       " background-color: hsl(183, 100%, 15%); color: hsl(0, 0%, 100%);";
     if (button1) {
       tip5.style = styleSelect;
-      tipCustom.value = '';
+      tipCustom.value = "";
     } else {
       tip5.style = styleNormal;
     }
     if (button2) {
       tip10.style = styleSelect;
-      tipCustom.value = '';
+      tipCustom.value = "";
     } else {
       tip10.style = styleNormal;
     }
     if (button3) {
       tip15.style = styleSelect;
-      tipCustom.value = '';
+      tipCustom.value = "";
     } else {
       tip15.style = styleNormal;
     }
     if (button4) {
       tip25.style = styleSelect;
-      tipCustom.value = '';
+      tipCustom.value = "";
     } else {
       tip25.style = styleNormal;
     }
     if (button5) {
       tip50.style = styleSelect;
-      tipCustom.value = '';
+      tipCustom.value = "";
     } else {
       tip50.style = styleNormal;
     }

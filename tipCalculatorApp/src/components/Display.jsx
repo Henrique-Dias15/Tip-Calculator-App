@@ -1,6 +1,6 @@
 import "./Display.css";
 import Button from "./Button";
-  import Input from "./Input";
+import Input from "./Input";
 import Resultados from "./Resultados";
 
 const Display = () => {
@@ -14,19 +14,19 @@ const Display = () => {
 
       <div className="Main">
         <div className="Inputs">
-          <Input name="Bill" />
+          <Input id1="billText" id2="bill" name="Bill" />
           <div className="inputTip">
             <p>Select Tip %</p>
             <div className="buttons">
-              <Button id="tip5" value= {5 + '%'} />
-              <Button id="tip10" value={10 + '%'} />
-              <Button id="tip15" value={15 + '%'} />
-              <Button id="tip25" value={25 + '%'} />
-              <Button id="tip50" value={50 + '%'} />
+              <Button id="tip5" value={5 + "%"} />
+              <Button id="tip10" value={10 + "%"} />
+              <Button id="tip15" value={15 + "%"} />
+              <Button id="tip25" value={25 + "%"} />
+              <Button id="tip50" value={50 + "%"} />
               <input type="number" id="tipCustom" placeholder={"Custom"} />
             </div>
           </div>
-          <Input name="Number of People" />
+          <Input id1="peopleText" id2="people" name="Number of People" />
         </div>
 
         <div className="Resultados">
