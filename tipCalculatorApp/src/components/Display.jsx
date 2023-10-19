@@ -1,65 +1,44 @@
-import './Display.css';
+import "./Display.css";
 import Button from "./Button";
-import Header from './Header';
-import Input from './Input';
-import Resultados from './Resultados';
+  import Input from "./Input";
+import Resultados from "./Resultados";
 
 const Display = () => {
-    return (
+  return (
     <div className="Display">
-      <Header
-        header1= 'SPLI'
-        header2= 'TTER'
-      />
+      <h1>
+        SPLI
+        <br />
+        TTER
+      </h1>
+
       <div className="Main">
         <div className="Inputs">
-          <Input
-          name='Bill'
-          />
+          <Input name="Bill" />
           <div className="inputTip">
             <p>Select Tip %</p>
             <div className="buttons">
-              <Button 
-              id='tip5'
-              value='5%'
-              />
-              <Button 
-              id='tip10'
-              value='10%'
-              />
-              <Button 
-              id='tip15'
-              value='15%'
-              />
-              <Button 
-              id='tip25'
-              value='25%'
-              />
-              <Button 
-              id='tip50'
-              value='50%'
-              />
-              <input type="number" id="tipCustom" placeholder={"Custom"}/>
+              <Button id="tip5" value= {5 + '%'} />
+              <Button id="tip10" value={10 + '%'} />
+              <Button id="tip15" value={15 + '%'} />
+              <Button id="tip25" value={25 + '%'} />
+              <Button id="tip50" value={50 + '%'} />
+              <input type="number" id="tipCustom" placeholder={"Custom"} />
             </div>
           </div>
-          <Input
-          name='Number of People'
-          />
+          <Input name="Number of People" />
         </div>
+
         <div className="Resultados">
-          <Resultados
-          name= 'Tip Amount'
-          />
-          <Resultados
-          name= 'Total'
-          />
+          <Resultados name="Tip Amount" />
+          <Resultados name="Total" />
           <div className="reset">
             <button id="resetButoon">RESET</button>
-            </div>
-        </div>
+          </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Display;

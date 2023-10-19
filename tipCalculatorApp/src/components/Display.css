@@ -29,6 +29,13 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  h1 {
+    color: hsl(183, 100%, 15%);
+    letter-spacing: 0.5rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
   
   /* Area de inputs */
   .Inputs {
