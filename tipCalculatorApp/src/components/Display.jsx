@@ -124,12 +124,12 @@ function reset (){
           <div className="inputTip">
             <p>Select Tip %</p>
             <div className="buttons">
-              <Button type = "button" id="tip5" value={5 + "%"}  onClick={handleTipChange}/>
-              <Button type = "button" id="tip10" value={10 + "%"} onClick={handleTipChange}/>
-              <Button type = "button" id="tip15" value={15 + "%"} onClick={handleTipChange}/>
-              <Button type = "button" id="tip25" value={25 + "%"} onClick={handleTipChange}/>
-              <Button type = "button" id="tip50" value={50 + "%"} onClick={handleTipChange}/>
-              <input type="number" id="tipCustom" placeholder="Custom" value={tipInput} onChange={handleTipChange}  />
+              <button  type = "button" id="tip5" value={5 + "%"}  onClick={handleTipChange}> 5% </button>
+              <button type = "button" id="tip10" value={10 + "%"} onClick={handleTipChange}> 10%</button>
+              <button type = "button" id="tip15" value={15 + "%"} onClick={handleTipChange}> 15%</button>
+              <button type = "button" id="tip25" value={25 + "%"} onClick={handleTipChange}> 25%</button>
+              <button type = "button" id="tip50" value={50 + "%"} onClick={handleTipChange}> 50% </button>
+              <input type="number" id="tipCustom" placeholder="Custom" /* value={tipInput}  */onChange={handleTipChange}  />
             </div>
           </div>
           <div className="inputBill">
