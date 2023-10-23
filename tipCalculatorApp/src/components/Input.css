@@ -48,3 +48,7 @@ input:focus {
   cursor: pointer;
   outline: 2px solid hsl(173, 61%, 77%);
 }
+
+.fa-solid fa-dollar-sign {
+  background-image: url(assets\icon-dollar.svg);
+}

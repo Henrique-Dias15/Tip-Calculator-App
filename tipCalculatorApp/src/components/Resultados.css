@@ -17,3 +17,7 @@ h2 {
   font-size: 3rem;
   color: hsl(172, 67%, 45%);
 }
+
+.error p{
+  display: hidden;
+}

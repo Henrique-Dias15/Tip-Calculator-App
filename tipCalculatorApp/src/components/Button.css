@@ -25,25 +25,4 @@
   cursor: pointer;
 }
 
-#tipCustom {
-  border: none;
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(183, 100%, 15%);
-  text-align: center;
-}
 
-#tipCustom::placeholder {
-  color: hsl(184, 14%, 56%);
-}
-
-#tipCustom:hover,
-#tipCustom:focus {
-  outline: 2px solid hsl(173, 61%, 77%);
-  cursor: pointer;
-}
-
-#tipCustom::-webkit-inner-spin-button,
-#tipCustom::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
