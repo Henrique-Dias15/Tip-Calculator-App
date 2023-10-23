@@ -12,9 +12,9 @@ const [tipInput, setTipInput] = useState("");
 const [peopleInput, setPeopleInput] = useState("");
 const [tipDollars, setTipDollars] = useState(0);
 const [billTotal, setBillTotal] = useState(0);
-const [isValidBill, setIsValidBill] = useState(true);
-const [isValidTip, setIsValidTip] = useState(true)
-const [isValidPeople, setIsValidPeople] = useState(true)
+const [isValidBill, setIsValidBill] = useState(false);
+const [isValidTip, setIsValidTip] = useState(false);
+const [isValidPeople, setIsValidPeople] = useState(false);
 
 const calculateTip = useCallback((e) =>{
 e?.preventDefault()
@@ -34,13 +34,36 @@ setBillTotal((parseBill + parseBill*(parseTip/100))/parsePeople);
 } , [peopleInput,tipInput,billInput,isValidBill,isValidTip,isValidPeople])
 
 function isValidInput(numStr, unitType){
-  if (unitType === "dollars" && numStr.match(/^\$.+/)) numStr = numStr.replace("$" , "")
-  if (unitType === "percent" && numStr.match(/.+%$/)) numStr = numStr.replace("%" , "")
-  if (unitType === "integer") return !numStr.match(/^0\d/g) && /^[1-9]\d*$/.test(numStr) &&
-  parseInt(numStr) >= 1
-  return (
-    !numStr.match(/^0\d/g) && numStr !== "" && !isNaN(numStr) && parseInt(numStr) >=0
-  )
+
+  if(numStr === '')
+{
+  return false;
+}
+  // Se unittype é "dollars", remove o "$" do inicio
+  if (unitType === "dollars" && numStr.match(/^\$.+/)) {
+    numStr = numStr.replace("$" , "");
+  }
+
+ // Se unittype é "percent", remove o "%" do final
+  if (unitType === "percent" && numStr.match(/.+%$/)) {
+    numStr = numStr.replace("%" , "");
+  }
+
+  // Verifica o tipo "integer"
+  if (unitType === "integer") {if( !numStr.match(/^0\d/g)  && /^[1-9]\d*$/.test(numStr) &&
+  parseInt(numStr) >= 1) {
+    return true;
+  } else{
+    return false;
+  }
+}
+  if (
+    !numStr.match(/^0\d/g) && numStr !== "" && !isNaN(numStr) && parseInt(numStr) >= 0
+  ){
+    return true;
+  }
+
+  return false;
 }
 
 function handleBillChange(e) {
@@ -65,7 +88,7 @@ function handlePeopleChange(e) {
 
 useEffect(() => {
   calculateTip()
-
+  console.log(everythingIsValid)
 }, [billInput, tipInput, peopleInput])
 
 const everythingIsValid = isValidBill && isValidPeople && isValidTip
@@ -74,7 +97,9 @@ function reset (){
   setBillInput("");
   setTipInput("");
   setPeopleInput("");
-  !everythingIsValid;
+  setIsValidBill(false);
+  setIsValidPeople(false);
+  setIsValidTip(false);
 }
 
   return (
@@ -93,7 +118,7 @@ function reset (){
              <label htmlFor="bill">Bill</label>
              
       </div>
-      <input type="text" className={isValidBill ? "" : 'error'} placeholder={0} id1="billText" id2="bill" name="Bill" value={billInput} onChange={handleBillChange}/>
+      <input type="text" className={isValidBill ? "" : "error"} placeholder={0} id1="billText" id2="bill" name="Bill" value={billInput} onChange={handleBillChange}/>
     </div>
         
           <div className="inputTip">
